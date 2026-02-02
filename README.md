@@ -1,2 +1,3 @@
 # Machine-learning
-vocdez
+vcodez  Machine learning intern 
+3 month
