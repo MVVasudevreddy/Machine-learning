@@ -1,0 +1,64 @@
+Contents of /root/.cache/kagglehub/datasets/imaadmahmood/global-finance-and-economic-indicators-dataset-2024/versions/1: ['Global finance data.csv']
+Index(['Country', 'Date', 'Stock_Index', 'Index_Value', 'Daily_Change_Percent',
+       'Market_Cap_Trillion_USD', 'GDP_Growth_Rate_Percent',
+       'Inflation_Rate_Percent', 'Interest_Rate_Percent',
+       'Unemployment_Rate_Percent', 'Currency_Code', 'Exchange_Rate_USD',
+       'Currency_Change_YTD_Percent', 'Government_Debt_GDP_Percent',
+       'Current_Account_Balance_Billion_USD', 'FDI_Inflow_Billion_USD',
+       'Commodity_Index', 'Oil_Price_USD_Barrel', 'Gold_Price_USD_Ounce',
+       'Bond_Yield_10Y_Percent', 'Credit_Rating', 'Political_Risk_Score',
+       'Banking_Sector_Health', 'Real_Estate_Index', 'Export_Growth_Percent',
+       'Import_Growth_Percent'],
+      dtype='object')
+
+LINEAR REGRESSION RESULTS
+RMSE: 3.7555342593465495
+R2: -13.74577364202663
+
+LINEAR REGRESSION COEFFICIENTS
+                                Feature   Coefficient
+17                Export_Growth_Percent  2.304252e-01
+4                 Interest_Rate_Percent  1.459910e-01
+5             Unemployment_Rate_Percent  2.901966e-02
+16                    Real_Estate_Index  2.662372e-02
+3                Inflation_Rate_Percent  2.441948e-02
+8           Government_Debt_GDP_Percent  7.510645e-03
+15                 Political_Risk_Score  1.186763e-03
+10               FDI_Inflow_Billion_USD  6.414827e-04
+6                     Exchange_Rate_USD  5.689594e-05
+0                           Index_Value  8.161069e-06
+12                 Oil_Price_USD_Barrel  6.328271e-15
+13                 Gold_Price_USD_Ounce  0.000000e+00
+9   Current_Account_Balance_Billion_USD -1.778127e-03
+7           Currency_Change_YTD_Percent -9.031297e-03
+1               Market_Cap_Trillion_USD -4.689248e-02
+18                Import_Growth_Percent -1.435769e-01
+2               GDP_Growth_Rate_Percent -2.168551e-01
+14               Bond_Yield_10Y_Percent -2.203215e-01
+11                      Commodity_Index -4.341743e+00
+
+RANDOM FOREST REGRESSION RESULTS
+RMSE: 0.6907448519004911
+R2: 0.5011621252644789
+
+FEATURE IMPORTANCE (RANDOM FOREST)
+Currency_Change_YTD_Percent            0.172947
+Political_Risk_Score                   0.122316
+Index_Value                            0.097385
+Commodity_Index                        0.091605
+Inflation_Rate_Percent                 0.091514
+Government_Debt_GDP_Percent            0.073994
+Interest_Rate_Percent                  0.057619
+Market_Cap_Trillion_USD                0.053989
+Real_Estate_Index                      0.044056
+Current_Account_Balance_Billion_USD    0.043017
+Bond_Yield_10Y_Percent                 0.037797
+GDP_Growth_Rate_Percent                0.028815
+FDI_Inflow_Billion_USD                 0.026254
+Exchange_Rate_USD                      0.018062
+Unemployment_Rate_Percent              0.015711
+Import_Growth_Percent                  0.013268
+Export_Growth_Percent                  0.011650
+Gold_Price_USD_Ounce                   0.000000
+Oil_Price_USD_Barrel                   0.000000
+dtype: float64
