@@ -143,6 +143,11 @@ Test:  2022–2024
 ### Example Outcomes
 1. Stock data: R² ≈ 0.62 (trend-dominated)
 2. Crypto data: R² ≈ 0.38 (noise-dominated)
+   
+   
+![Regression Output](https://github.com/MVVasudevreddy/Machine-learning/blob/main/Financial%20Market/finanace%20.png)
+
+
 
 ---
 
@@ -181,7 +186,7 @@ Regression on financial sequential data is **educational, not magical**.
 
 ---
 
-## 13. Final Verdict (No Sugarcoating)
+## 13. Final Verdict 
 Regression **will not beat the market**.
 But it **will teach you**:
 - Time-series handling
