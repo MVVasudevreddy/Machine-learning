@@ -9,18 +9,13 @@ from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import mean_squared_error, r2_score, classification_report
-
-# ----------------
 # LOAD DATA
-# ----------------
 # Debugging: List contents of the path to find the correct filename
 print(f"Contents of {path}: {os.listdir(path)}")
 
 df = pd.read_csv(os.path.join(path, "Global finance data.csv"))
 print(df.columns)
-# ----------------
 # DEFINE TARGET & FEATURES
-# ----------------
 TARGET = "Daily_Change_Percent"
 
 DROP_COLS = [
@@ -35,24 +30,18 @@ DROP_COLS = [
 X = df.drop(columns=DROP_COLS + [TARGET])
 y = df[TARGET]
 
-# ----------------
 # HANDLE MISSING VALUES
-# ----------------
 imputer = SimpleImputer(strategy="median")
 X = pd.DataFrame(imputer.fit_transform(X), columns=X.columns)
 
-# ----------------
 # TRAIN TEST SPLIT
-# ----------------
 X_train, X_test, y_train, y_test = train_test_split(
     X, y,
     test_size=0.25,
     random_state=42
 )
 
-# ================================
 # MODEL 1: LINEAR REGRESSION
-# ================================
 lr = LinearRegression()
 lr.fit(X_train, y_train)
 
@@ -70,9 +59,7 @@ coef_df = pd.DataFrame({
 print("\nLINEAR REGRESSION COEFFICIENTS")
 print(coef_df)
 
-# ================================
 # MODEL 2: RANDOM FOREST REGRESSOR
-# ================================
 rf = RandomForestRegressor(
     n_estimators=300,
     max_depth=6,
@@ -86,9 +73,7 @@ print("\nRANDOM FOREST REGRESSION RESULTS")
 print("RMSE:", np.sqrt(mean_squared_error(y_test, y_pred_rf)))
 print("R2:", r2_score(y_test, y_pred_rf))
 
-# ----------------
 # FEATURE IMPORTANCE
-# ----------------
 importances = pd.Series(
     rf.feature_importances_,
     index=X.columns
@@ -104,9 +89,8 @@ plt.ylabel("Importance")
 plt.tight_layout()
 plt.show()
 
-# ================================
 # OPTIONAL: MARKET REGIME CLASSIFICATION
-# ================================
+
 def market_regime(change):
     if change > 0.5:
         return "Bull"
